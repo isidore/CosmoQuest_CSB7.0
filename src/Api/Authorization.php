@@ -1,6 +1,6 @@
 <?php
 
-namespace CosmoQuestX;
+namespace CosmoQuestX\Api;
 
 /**
  * Created by PhpStorm.
