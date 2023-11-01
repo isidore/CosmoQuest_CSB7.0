@@ -3,8 +3,9 @@ declare(strict_types=1);
 
 namespace CosmoQuestX\Tests;
 
-use CosmoQuestX\Applesauce;
+use Unnamed\Applesauce;
 use PHPUnit\Framework\TestCase;
+use function PHPUnit\Framework\assertEquals;
 
 class BuildTest extends TestCase
 {
@@ -15,6 +16,8 @@ class BuildTest extends TestCase
         $this->assertEquals(3, $applesauce->TheWordThree());
     }
 
+
+    /** @test */
     public function testLogin()
     {
         include(__DIR__ . "/../csb/csb-accounts/auth.php");
@@ -27,6 +30,11 @@ class BuildTest extends TestCase
         $this->assertEquals(TRUE, $toCheck);
     }
 
+    public function testAuthClass()
+    {
+        $this->assertEquals(1,1);
+
+    }
 
 
 }
