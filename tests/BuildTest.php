@@ -5,7 +5,6 @@ namespace CosmoQuestX\Tests;
 
 use CosmoQuestX\Applesauce;
 use PHPUnit\Framework\TestCase;
-use function PHPUnit\Framework\assertEquals;
 
 class BuildTest extends TestCase
 {
@@ -26,7 +25,7 @@ class BuildTest extends TestCase
                 return [['name' => 'name']];
             }
         };
-        $toCheck = chk_UserId($db,"id","name");
+        $toCheck = \Authorization::chk_UserId($db, "id", "name");
         $this->assertEquals(TRUE, $toCheck);
     }
 
