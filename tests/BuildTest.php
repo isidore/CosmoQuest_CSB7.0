@@ -17,8 +17,12 @@ class BuildTest extends TestCase
 
     public function testLogin()
     {
-        include("../csb/csb-accounts/auth.php");
-        $db = NULL;
+        include(__DIR__ . "/../csb/csb-accounts/auth.php");
+        $db = new class {
+            public function runQueryWhere() {
+                return [['name' => 'name']];
+            }
+        };
         $toCheck = chk_UserId($db,"id","name");
         $this->assertEquals(TRUE, $toCheck);
     }
