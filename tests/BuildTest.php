@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace CosmoQuestX\Tests;
 
-use Unnamed\Applesauce;
+use CosmoQuestX\Applesauce;
 use PHPUnit\Framework\TestCase;
 use function PHPUnit\Framework\assertEquals;
 
